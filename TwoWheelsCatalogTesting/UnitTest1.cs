@@ -18,4 +18,14 @@ public class Tests
         Assert.AreEqual(0, TwoWheels.Products.CalculateGST(0));
         Assert.AreEqual(-9, TwoWheels.Products.CalculateGST(-90));
     }
+
+    [Test]
+    public void Test_CalculateTotalGST()
+    {
+        double result = TwoWheels.Products.CalculateGST(1000);
+        Assert.AreEqual(100, result);
+        Assert.AreEqual(10, TwoWheels.Products.CalculateGST(100));
+        Assert.AreEqual(0, TwoWheels.Products.CalculateGST(0));
+        Assert.AreEqual(-9, TwoWheels.Products.CalculateGST(-90));
+    }
 }

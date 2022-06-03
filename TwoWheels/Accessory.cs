@@ -28,11 +28,11 @@ namespace TwoWheels
         public override string ToString()
         {
             return 
-                    $"===============================================" +
+                    $"===============================================\n" +
                     $"Name: {ProductName}\n" +
                     $"Color: {AccessoryColor}\n" +
                     $"Size: {AccessorySize}\n" +
-                    $"Description: {ProductDescription}\n" +
+                    $"Description: {WordWrapping(ProductDescription)}\n\n" +
                     $"Price: {string.Format("{0:C2}", ProductPrice).PadLeft(12)}\n" +
                     $"  GST: {string.Format("{0:C2}", GST).PadLeft(12)}\n" +
                     $"Total: {string.Format("{0:C2}", TotalPrice).PadLeft(12)}\n" +

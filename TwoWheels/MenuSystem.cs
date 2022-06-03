@@ -37,12 +37,14 @@ namespace TwoWheels
                     {
                         Console.Clear();
                         AddProductMenu();
+                        MainMenu();
                         break;
                     }
                 case "3":
                     {
                         Console.Clear();
                         RemoveProductMenu();
+                        MainMenu();
                         break;
                     }
 
@@ -77,7 +79,7 @@ namespace TwoWheels
                 case "0":
                     {
                         Console.Clear();
-                        MainMenu();
+                        return;
                         break;
                     }
 
@@ -85,20 +87,20 @@ namespace TwoWheels
                     {
                         Console.Clear();
                         DBmethods.NewMotorcycle();
-                        MainMenu();
+                        return;
                         break;
                     }
                 case "2":
                     {
                         Console.Clear();
                         DBmethods.NewAccessory();
-                        AddProductMenu();
+                        return;
                         break;
                     }
                 default:
                     {
                         Console.Clear();
-                        AddProductMenu();
+                        return;
                         break;
                     }
             }
@@ -121,7 +123,13 @@ namespace TwoWheels
             Console.Write("Record# or Enter to return to prev. menu > ", Color.Blue);
              string user_choice = Console.ReadLine();
 
+            if (user_choice == "")
+            {
+                Console.Clear();
+                return;
+            }
             DBmethods.RemoveProduct(user_choice);
+
             }
         }
     }

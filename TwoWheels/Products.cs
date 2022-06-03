@@ -31,6 +31,25 @@ namespace TwoWheels
             }
             return totaltax;
         }
+
+        public static string WordWrapping(string text)
+        {
+            var words = text.Split(' ');
+            var lines = words.Skip(1).Aggregate(words.Take(1).ToList(), (l, w) =>
+            {
+                if (l.Last().Length + w.Length >= 50)
+                    l.Add(w);
+                else
+                    l[l.Count - 1] += " " + w;
+                return l;
+            });
+            string Wrapped = "";
+            foreach (string line in lines)
+            {
+                Wrapped += "\n" + line ;
+            }
+            return Wrapped;
+        }
     }
 }
 
