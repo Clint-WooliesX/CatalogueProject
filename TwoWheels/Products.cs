@@ -11,8 +11,9 @@ namespace TwoWheels
     {
         public string ProductName { get; set; }
         public string ProductDescription { get; set; }
-        public double ProductPrice { get; set; }
-        public double GST { get; set; }
+        public double ProductPrice{get; set;}
+        public double GST {get{return CalculateGST(ProductPrice);} set{}}
+        public double TotalPrice { get { return ProductPrice + CalculateGST(ProductPrice); } set { } }
         public bool is_Accessory { get; set; }
 
         public static double CalculateGST(double price)
@@ -24,7 +25,7 @@ namespace TwoWheels
         public static double totalGST()
         {
             double totaltax = 0;
-            foreach(var item in Program.theCatalog)
+            foreach (var item in Program.theCatalog)
             {
                 totaltax += CalculateGST(item.ProductPrice);
             }

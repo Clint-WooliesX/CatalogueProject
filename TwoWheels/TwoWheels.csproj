@@ -11,6 +11,7 @@
     <None Remove="JsonSubTypes" />
     <None Remove="Newtonsoft.Json" />
     <None Remove="Colorful.Console" />
+    <None Remove="Microsoft.NET.Test.Sdk" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="JsonSubTypes" Version="1.9.0" />

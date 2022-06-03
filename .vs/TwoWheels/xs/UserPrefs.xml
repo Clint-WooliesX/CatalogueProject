@@ -1,4 +1,28 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{BA978B46-C047-496A-BEED-738A6DE83CA4}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.TwoWheels PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.TwoWheelsCatalogTesting FirstBuild="True" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TwoWheels/MenuSystem.cs">
+    <Files>
+      <File FileName="TwoWheels/Program.cs" Line="32" Column="1" />
+      <File FileName="TwoWheels/MenuSystem.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TwoWheels" expanded="True">
+            <Node name="TwoWheels" expanded="True">
+              <Node name="MenuSystem.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>

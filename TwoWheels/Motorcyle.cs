@@ -35,8 +35,8 @@ namespace TwoWheels
                     $"Model: {MotorcycleModel}\n" +
                     $"Description: {ProductDescription}\n" +
                     $"Price: {string.Format("{0:C2}", ProductPrice).PadLeft(12)}\n" +
-                    $"  GST: {string.Format("{0:C2}", Products.CalculateGST(ProductPrice)).PadLeft(12)}\n" +
-                    $"Total: {string.Format("{0:C2}", ProductPrice + Products.CalculateGST(ProductPrice)).PadLeft(12)}\n" +
+                    $"  GST: {string.Format("{0:C2}", GST).PadLeft(12)}\n" +
+                    $"Total: {string.Format("{0:C2}", TotalPrice).PadLeft(12)}\n" +
                     $"-----------------------------------------------\n";
         }
     }
