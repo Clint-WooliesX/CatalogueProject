@@ -8,7 +8,13 @@ namespace TwoWheels
     {
         public static void PrintCatalog()
         {
-            if(Program.theCatalog.Count == 0)
+            Console.Clear();
+            Console.WriteLine();
+            Console.WriteLine("########################################################");
+            Console.WriteLine();
+
+
+            if (Program.theCatalog.Count == 0)
             {
                 Console.WriteLine("The Catalog is empty.", Color.BlueViolet);
                 return;
@@ -26,11 +32,10 @@ namespace TwoWheels
         public static void SaveToFile()
         {
             string jsonObject = JsonConvert.SerializeObject(Program.theCatalog.ToArray());
-
             Console.WriteLine();
-            Console.WriteLine("Succesfully added to Catalog", Color.DarkGreen);
-
+            Console.WriteLine("Catalog succesfuly updated", Color.DarkGreen);
             File.WriteAllText(Program.filePath, jsonObject);
+            Program.readData = File.ReadAllText(Path.Combine(Program.folderPath, "Default_Catalog.json"));
         }
 
         public static void NewMotorcycle()
@@ -146,10 +151,12 @@ namespace TwoWheels
             Console.WriteLine(" type YES to proceed or enter nothing to return to main menu ", Color.OrangeRed);
             Console.Write(" Are you sure you want to do this? > ", Color.Blue);
             string user_input = Console.ReadLine();
+
             if (user_input == "YES")
             {
                 Program.theCatalog.Clear();
                 SaveToFile();
+                Program.theCatalog = JsonConvert.DeserializeObject<List<Products>>(Program.readData);
             }
         }
     }
